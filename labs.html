@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Automation</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+      <!-- guage0 -->
+    <link rel="stylesheet" href="svg-gauge-master/example/index.css" />
+    <link rel="stylesheet" href="svg-gauge-master/example/dark.css" />
+    <script type="text/javascript" src="svg-gauge-master/example/highlight.pack.js"> </script>
+    <!-- jquery  -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"
+    integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+    rel="stylesheet">
+   
+    <style>
+      .profile{
+        width:max-content;
+        height:200px;
+        /* background-color:cornsilk;
+        color:black; */
+        border-left: 5px solid darkgray;
+      
+        border-radius: 15%;
+        padding-top: 20px;
+        margin-left: -10px;
+      }
+      .center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: -40rem;
+	margin-left: 50rem;
+}
+    </style>
+
+
+
+</head>
+<body class="bg-dark background-image">
+    <div class="container-fluid">
+      <!-- navbar -->
+          <div class="row" style="border-bottom: 1px solid white;">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <!-- <a class="navbar-brand text-white lead " href="#">Lab Automation</a> -->
+                  <img style="width: 100px;" src="https://content3.jdmagicbox.com/comp/hyderabad/a1/040pxx40.xx40.180216171541.m3a1/catalogue/hyderabad-institute-of-technology-and-management-gv-sagar-reddy-nagar-ramakrishna-puram-hyderabad-colleges-bw11atljag.jpg" alt="" />
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item ml-5">
+                        <a class="nav-link active h5 text-success" aria-current="page" href="labs.html">Home</a>
+                      </li>
+                      <li class="nav-item ml-5">
+                        <a class="nav-link text-white" href="airpollution.html">Air pollution</a>
+                      </li>
+                      <li class="nav-item ml-5">
+                        <a class="nav-link text-white" href="temperature.html">Temperature</a>
+                      </li> 
+                      <li class="nav-item ml-5">
+                        <a class="nav-link text-white" href="smartbin.html">Smartbin</a>
+                      </li>
+                      <li class="nav-item ml-5">
+                        <a class="nav-link text-white" href="Attendance.html">Attendance</a>
+                      </li>
+                      <li class="nav-item ml-5">
+                        <a class="nav-link text-white" href="loads.html"> Load Control</a>
+                      </li>
+                      <li class="nav-item ml-5">
+                        <a class="nav-link text-white" href="plugload.html"> Plug Load</a>
+                      </li>
+                      <!-- <li class="nav-item ml-5">
+                        <a class="nav-link text-white" href="sanitizer.html"> Sanitizer</a>
+                      </li>
+			                <li class="nav-item ml-5">
+                        <a class="nav-link text-white" href="health.html"> Health</a>
+                      </li>-->
+                      <li class="nav-item dropdown ml-5">
+                        <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="material-icons-sharp text-white">
+                            more_vert
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
+                          <!-- <li><a class="dropdown-item" href="#">Another action</a></li> -->
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="loginpage.html"><span class="material-icons-sharp text-black" style="font-size:medium;">
+                            logout
+                          </span>Logout</a></li>
+                        </ul>
+                      </li>
+                      <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li> -->
+                      <!-- <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                      </li> -->
+                    </ul>
+                    <!-- <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form> -->
+                  </div>
+                </div>
+              </nav>
+        </div>
+        <!--<div class="row margint">
+            <div class="col-sm-4 ">
+            <a href="airpollution.html">
+                <div class="gauge  mx-auto">
+                    <div class="gauge__body">
+                        <div class="gauge__fill">
+                        </div>
+                        <div class="gauge__cover">
+                        </div>
+                    </div>
+              </div>
+              <div>
+                    <p class="text-white text-center mt-5">Temperature</p>
+              </div>
+            </a>
+            </div>
+
+            <div class="col-sm-4 pad">
+              <a href="airpollution.html">
+              <div class="display mx-auto">
+                <div id="gauge0" class="gauge-container"></div>
+              </div>
+              <div>
+                <p class="text-white text-center pad padr ">PM 10</p>
+              </div>
+            </a>
+            </div>
+            <div class="col-sm-4 pad "> 
+              <a href="airpollution.html">
+              <div class="display mx-auto">
+                <div id="gauge3" class="gauge-container three"></div>
+                </div>
+                <div>
+                  <p class="text-white text-center padr pad">PM 2.5</p>
+            </div>
+              </a>
+            </div>
+        </div>-->
+        <div class="row margint">
+            <!-- <div class="col-sm-4">
+               <a href="smartbin.html">
+                <div class="display mx-auto pl-5">
+                  <div id="gauge1" class="gauge-container one"></div>
+                </div>
+                <div>
+                  <p class="text-white text-center ">Bin Filled percentage</p>
+            </div>
+               </a>
+            </div> -->
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Automation</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+</head>
+<body class="bg-dark text-white">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="count p-5">
+                    Number of Students
+                </div>
+                <div class="screen">
+                    <span class="p-5 h4">Count:</span>
+                    <span class="m-5 h1" id="Countvalue"></span>
+                </div>
+            </div>
+            <div class="col-sm-4 mt-5 profile">
+                Name: <span id="nameh" class="ml-5 pl-5"></span><br>
+                Date: <span id="Desigh" class="ml-5 pl-5"></span><br>
+                Time: <span id="Timeh" class="ml-5 pl-5"></span><br>
+            </div>
+        </div>
+    </div>
+
+    </div>
+            </div>
+          </div>
+          <div class = "row">
+            <div class="col-sm-3.5 mt-5 ">
+              <a href="temperature.html">
+                <iframe width="450" height="260" style="border: 1px solid #c40c0cfc;" src="https://thingspeak.com/channels/2357441/widgets/768699"></iframe>
+                <div>
+                      <p class="text-white text-center mt-3">Temperature</p>
+                </div>
+              </a>
+              </div>
+          </div>  
+  <div class = "center">
+    <!--<div class="col-sm-12 mt-5">-->
+    <div class="video-container">
+      <iframe width="700" height="380" src="https://www.youtube.com/embed/CHs6JUBoOKg" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+</body>
+<!-- bootstrap js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"></script>
+<!-- guage js -->
+<script type="text/javascript" src="svg-gauge-master/src/gauge.js"> </script>
+
+
+<script>
+  //last asscess
+  const sheetId = "1j9bIVNfSAqP27qqCjtO8ogmXsZ1ADx3sDSJoUBJZdsI";
+  const apiKey = "AIzaSyARXao2aKy8YD-P5252hjBMSovZPQYaRmI";
+  const sheetName = "Sheet1";
+  const range = `${sheetName}!A:E`; // Adjust this range as needed
+  const sheetURL = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
+
+  $.ajax({
+      type: "GET",
+      url: sheetURL,
+      dataType: "json",
+      success: function (response) {
+          if (!response.values || response.values.length === 0) {
+              console.error("No data found in the specified range.");
+              return;
+          }
+
+          var data = response.values;
+          console.log(data);
+
+          var nameh = document.querySelector("#nameh");
+          var desigh = document.querySelector("#Desigh");
+          var timeh = document.querySelector("#Timeh");
+          var valus = -1;
+
+          document.getElementById("Countvalue").innerHTML = data.length - 1; // Exclude header row
+
+          for (var i = data.length - 1; i > 1; i--) {
+              if (data[i][4] && data[i][4].length === 12) { // Assuming "Attendance" is in column 5 (index 4)
+                  valus = i;
+                  console.log(valus);
+                  break;
+              }
+          }
+
+          if (valus !== -1) {
+              switch (data[valus][4]) { // Assuming "Attendance" is in column 5 (index 4)
+                  case "3A00EBBEEB84":
+                      nameh.innerHTML = "P.Mahesh babu";
+                      break;
+                  case "55005A1BF6E2":
+                      nameh.innerHTML = "MD Wasim";
+                      break;
+                  case "55002BEC188A":
+                      nameh.innerHTML = "R.Sandeep";
+                      break;
+                  case "3A00ED0D18C2":
+                      nameh.innerHTML = "M.Udaykiran";
+                      break;
+                  case "3A00ED7001A6":
+                      nameh.innerHTML = "M.Shivakumar";
+                      break;
+                  case "3A00EB8B4218":
+                      nameh.innerHTML = "S.Yashwanth";
+                      break;
+                  case "3F006664724F":
+                      nameh.innerHTML = "RAMAGIRI MAHESH BABU";
+                      break;
+                  case "3F006661A79F":
+                      nameh.innerHTML = "BOGOLU UMESH REDDY";
+                      break;
+                  case "55003995B841":
+                      nameh.innerHTML = "Unknown User";
+                      break;
+                  case "3C00976934F6":
+                      nameh.innerHTML = "GUNTI SINDHU SAGAR";
+                      break;
+                  default:
+                      nameh.innerHTML = "Unknown";
+              }
+
+              desigh.innerHTML = data[valus][0]; // Assuming "Date" is in column 1 (index 0)
+              timeh.innerHTML = data[valus][1] || "N/A"; // Assuming "Time" is in column 3 (index 2), show "N/A" if empty
+          } else {
+              console.error("No valid attendance data found.");
+          }
+      },
+      error: function (xhr, status, error) {
+          console.error("Failed to fetch data:", status, error); // Error handling
+      }
+  });
+
+
+// Temperature guage
+  const gaugeElement = document.querySelector(".gauge");
+function setGaugeValue(gauge, value) {
+  // if (value < 0 || value > 1) {
+  //   return;
+  // }
+
+  gauge.querySelector(".gauge__fill").style.transform = `rotate(${
+    value / 2
+  }turn)`;
+  gauge.querySelector(".gauge__cover").textContent = `${value*100}\u00B0C`;
+}
+
+
+// Temperature
+fetch("https://blr1.blynk.cloud/external/api/get?token=s2291g1WHa7xVg5Sz8MD1Kx2nJ_BfwpL&v6") // virtual pin
+         .then(response => response.json())
+         .then(data => {
+        //   setGaugeValue(gaugeElement, data/100);
+        setGaugeValue(gaugeElement, 45/100);
+         })
+
+
+
+
+
+var pad = function(tar) {}
+// gauge PM10
+  var gauge0 = Gauge(document.getElementById("gauge0"));
+
+
+  //gauge Bin
+
+  var gauge1 = Gauge(
+        document.getElementById("gauge1"),
+		    {
+          max: 100,
+          dialStartAngle: -90,
+          dialEndAngle: -90.001,
+          value: 100,
+          // label: function(value) {
+          //   return (Math.round(value * 100) / 100) + "/" + this.max;
+          // }
+          
+        }
+      );
+ //gauge PM 2.5
+ var gauge3 = Gauge(
+        document.getElementById("gauge3"),
+		    {
+          max: 100,
+          // value: 35
+        }
+      );
+ 
+
+
+
+
+
+  (function loop() {
+        // Pm10
+        fetch("https://blr1.blynk.cloud/external/api/get?token=s2291g1WHa7xVg5Sz8MD1Kx2nJ_BfwpL&v7") // virtual pin
+         .then(response => response.json())
+         .then(data => {
+          console.log(data);
+          var value=data;
+        //   gauge0.setValueAnimated(value, 1);
+        gauge0.setValueAnimated(30, 1);
+         })
+
+
+          // Pm 2.5
+        fetch("https://blr1.blynk.cloud/external/api/get?token=s2291g1WHa7xVg5Sz8MD1Kx2nJ_BfwpL&v8") // virtual pin
+         .then(response => response.json())
+         .then(data => {
+          console.log(data);
+          var value3=data;
+        //   gauge3.setValueAnimated(value3, 1);
+        gauge3.setValueAnimated(50, 1);
+         })
+
+        //  Bin
+
+        fetch("https://blr1.blynk.cloud/external/api/get?token=zfCMt9IIeUhhKmPMK0Au1E7IDm8Tfi9l&v0") // virtual pin
+         .then(response => response.json())
+         .then(data => {
+          console.log(data);
+          var value1=data;
+          gauge1.setValueAnimated(value1, 1);
+         })
+
+        
+        // gauge1.setValueAnimated(value1);
+
+        window.setTimeout(loop, 4000);
+      })();
+
+
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Signup/Login Page</title>
+<!-- <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script> -->
+
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"
+  integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+<script src="loginpage.js">
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+<style>
+    body{
+        background-image: url(hitam.jpg);
+        background-size: cover;
+        background-position: fixed;
+        background-repeat: no-repeat;
+        height:100vh
+
+    }
+    .marginl{
+        margin-left:540px
+    }
+</style>
+</head>
+<body>
+    <div class="row" id="heads" >
+        <p class="h3 m-5 mx-auto bg-dark text-white p-4">Department Of Electrical And Electronics Engineering</p>
+    </div>
+    <div class="row m-5">
+        <div class="col-4">
+            <div class="bg-white p-5" style="width:320px"> 
+            <p class="text-danger">Login with credentials</p>
+            <form action="">
+                <label for="email">Email</label>
+                <br>
+                <input type="email" id="emailInput">
+                <br>
+                <label for="passwords">
+                    Password
+                </label>
+                <br>
+                <input type="password" id="passwordInput">
+            </form>
+            <button onclick="submit()" class="btn btn-success mt-3">Login</button> 
+            <p class="mt-3"><button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Create new Account
+              </button></p>
+            </div>
+        </div>
+        <div class="col-4 " >
+            <div class="d-none">
+                <p class="text-danger"> Create a New Account</p>
+                <form >
+                    <label>Name<span aria-label="required" class="text-danger">*</span></label> 
+                    <br/>
+                    <input name="Name" />
+                    <br/>
+                    
+                    <label>Email <span aria-label="required" class="text-danger">*</span></label>
+                    <br/>
+                    <input name="email" />
+                    <br/>
+                    
+                    <label>Password <span aria-label="required" class="text-danger">*</span></label>
+                    <br/>
+                    <input  name="password">
+                    </input>
+                    <br/>
+                    <br/>
+                  </form>
+                  <button onclick="SubForm()" class="btn btn-success">Submit</button> 
+                </div>
+        </div>
+        <div class="col-4 collapse" id="collapseExample" >
+            <div class="bg-white p-5" style="width:320px">
+            <p class="text-danger"> Create a New Account</p>
+            <form id="newForm">
+                <label>Name<span aria-label="required" class="text-danger">*</span></label> 
+                <br/>
+                <input name="Name" />
+                <br/>
+                
+                <label>Email <span aria-label="required" class="text-danger">*</span></label>
+                <br/>
+                <input name="email" />
+                <br/>
+                
+                <label>Password <span aria-label="required" class="text-danger">*</span></label>
+                <br/>
+                <input  name="password">
+                </input>
+                <br/>
+                <br/>
+              </form>
+              <button onclick="SubForm()" class="btn btn-success">Submit</button> 
+            </div>
+
+        </div>
+    </div>
+ 
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"></script>
+</html
